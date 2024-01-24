@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "start-pwa": "nx build --prod && http-server -p 8080 -c-1 dist/pwa/browser"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/router": "~17.0.0",
     "@angular/service-worker": "~17.0.0",
     "@nx/angular": "17.2.8",
+    "http-server": "^14.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"
